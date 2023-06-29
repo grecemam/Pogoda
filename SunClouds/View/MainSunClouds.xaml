@@ -1,0 +1,254 @@
+﻿<Window x:Class="SunClouds.View.MainSunClouds"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:uc="clr-namespace:SunClouds.Resources"
+        xmlns:local="clr-namespace:SunClouds.View"
+        xmlns:lvc="clr-namespace:LiveCharts.Wpf;assembly=LiveCharts.Wpf"
+        mc:Ignorable="d"
+        Title="MainSunClouds" Name="MainSunCloudsWindow" Height="800" Width="1200" MinHeight="286" MinWidth="450" WindowStyle="None" WindowStartupLocation="CenterScreen" Icon="pack://siteoforigin:,,,/Resources/Icon.png" SizeChanged="MainSunCloudsWindow_SizeChanged">
+    <Grid Background="{DynamicResource Main}">
+        <Label Name="CloseBtn" BorderThickness="0" Content="X" FontWeight="Bold" FontSize="12" Foreground="{DynamicResource Buttons}" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontFamily="#Jura" Height="15" Width="15" Margin="0,12,12,0" Padding="0" HorizontalAlignment="Right" VerticalAlignment="Top" MouseEnter="SpecialBtn_MouseEnter" MouseLeave="SpeacialBtn_MouseLeave" MouseDoubleClick="CloseBtn_MouseDoubleClick">
+            <Label.Background>
+                <SolidColorBrush Opacity="0"></SolidColorBrush>
+            </Label.Background>
+        </Label>
+        <Label Name="HideBtn" BorderThickness="0" Content="-" FontWeight="Bold" FontSize="18" Foreground="{DynamicResource Buttons}" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontFamily="#Jura" Height="15" Width="15" Margin="0,10,52,0" Padding="0" HorizontalAlignment="Right" VerticalAlignment="Top" MouseEnter="SpecialBtn_MouseEnter" MouseLeave="SpeacialBtn_MouseLeave" MouseDoubleClick="HideBtn_MouseDoubleClick">
+            <Label.Background>
+                <SolidColorBrush Opacity="0"></SolidColorBrush>
+            </Label.Background>
+        </Label>
+        <Label Name="FullSizeBtn" BorderThickness="0" Content="▢" Padding="0" FontWeight="Bold" FontSize="12" Foreground="{DynamicResource Buttons}" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontFamily="#Jura" Height="15" Width="15" Margin="0,12,32,0" HorizontalAlignment="Right" VerticalAlignment="Top" MouseEnter="SpecialBtn_MouseEnter" MouseLeave="SpeacialBtn_MouseLeave" MouseDoubleClick="FullSizeBtn_MouseDoubleClick">
+            <Label.Background>
+                <SolidColorBrush Opacity="0"></SolidColorBrush>
+            </Label.Background>
+        </Label>
+        <Grid Width="438" HorizontalAlignment="Left">
+            <Grid.Background>
+                <SolidColorBrush Color="#F8C5B4" Opacity="0.5"></SolidColorBrush>
+            </Grid.Background>
+            <TextBlock Margin="4,25,4,0" Height="52" Name="CityName" Text="{Binding CityWeather.location.name}" Foreground="{DynamicResource Focus}" FontSize="36" FontFamily="#Jura" TextAlignment="Center" VerticalAlignment="Top"></TextBlock>
+            <Rectangle Fill="{DynamicResource Focus}" Width="405" Height="2" Margin="22,80,11,0" VerticalAlignment="Top"/>
+            <Image Source="pack://siteoforigin:,,,/Resources/Line.png" Margin="35,188,225,10" Width="182" Height="auto" MinHeight="620"/>
+            <Image Source="{Binding leftImg[0]}" Margin="64,126,0,0" MinWidth="123" MinHeight="123" Height="123" VerticalAlignment="Top" HorizontalAlignment="Left" Width="123"/>
+            <TextBlock FontSize="26" Text="{Binding LeftPanelText[0]}" TextWrapping="Wrap" TextAlignment="Right" FontFamily="#Jura" Foreground="{DynamicResource Focus}" FontWeight="Bold" MinHeight="133" MinWidth="212" Margin="0,126,34,0" HorizontalAlignment="Right" Width="212" Height="133" VerticalAlignment="Top"/>
+            <Image Source="{Binding leftImg[1]}" MinWidth="60" Height="60" MinHeight="60" Margin="95,342,283,390" Width="60"/>
+            <TextBlock FontSize="20" Text="{Binding LeftPanelText[1]}" TextWrapping="Wrap" TextAlignment="Left" FontFamily="#Jura" Foreground="{DynamicResource Focus}" FontWeight="Bold" MinHeight="133" MinWidth="212" Margin="181,342,45,317" Width="212" Height="133"/>
+            <Image Source="{Binding leftImg[2]}" MinWidth="60" Height="60" MinHeight="60" Margin="95,502,283,215" Width="60"/>
+            <TextBlock FontSize="20" Text="{Binding LeftPanelText[2]}" TextWrapping="Wrap" TextAlignment="Left" FontFamily="#Jura" Foreground="{DynamicResource Focus}" FontWeight="Bold" MinHeight="133" MinWidth="212" Margin="181,510,45,150" Width="212" Height="133"/>
+            <Image Source="{Binding leftImg[3]}" MinWidth="60" MinHeight="60" Margin="95,657,283,38" Width="60" Height="60"/>
+            <TextBlock FontSize="20" Text="{Binding LeftPanelText[3]}" TextWrapping="Wrap" TextAlignment="Left" FontFamily="#Jura" Foreground="{DynamicResource Focus}" FontWeight="Bold" MinHeight="133" MinWidth="212" Margin="181,676,45,-16" Width="212" Height="133"/>
+        </Grid>
+        <Label Content="Погода" FontSize="50" FontFamily="#Jura" Foreground="White" Margin="461,46,217,0" MouseDoubleClick="Label_MouseDoubleClick" Height="77" VerticalAlignment="Top"></Label>
+        <Label Content="Настройки" HorizontalContentAlignment="Right" FontSize="50" FontFamily="#Jura" Foreground="White" Margin="670,46,32,0" MouseDoubleClick="Label_MouseDoubleClick_1" Height="77" VerticalAlignment="Top"></Label>
+        <Grid Margin="438, 94,0,0" VerticalAlignment="Top" HorizontalAlignment="Left" Name="RightPanelMain" Visibility="Visible">
+            <ScrollViewer VerticalScrollBarVisibility="Visible" VerticalAlignment="Top">
+                <StackPanel VerticalAlignment="Top">
+                    <Grid Margin="20, 20, 20, 0" Height="101" VerticalAlignment="Top">
+                        <Grid.Background>
+                            <SolidColorBrush Color="#F8C5B4" Opacity="0.5"></SolidColorBrush>
+                        </Grid.Background>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="120"></ColumnDefinition>
+                            <ColumnDefinition Width="150"></ColumnDefinition>
+                            <ColumnDefinition Width="80"></ColumnDefinition>
+                            <ColumnDefinition Width="80"></ColumnDefinition>
+                            <ColumnDefinition Width="150"></ColumnDefinition>
+                            <ColumnDefinition Width="150"></ColumnDefinition>
+                            <ColumnDefinition Width="150"></ColumnDefinition>
+                            <ColumnDefinition Width="120"></ColumnDefinition>
+                        </Grid.ColumnDefinitions>
+                        <Grid.RowDefinitions>
+                            <RowDefinition></RowDefinition>
+                            <RowDefinition></RowDefinition>
+                        </Grid.RowDefinitions>
+                        <TextBlock Foreground="{DynamicResource Focus}" Grid.RowSpan="2" Text="{Binding currentTemp}" FontSize="34" Width="101" Padding="0,25, 0, 0" TextAlignment="Center" HorizontalAlignment="Left" FontFamily="#Jura" Grid.Column="0"></TextBlock>
+                        <Rectangle Fill="White" Width="2" Height="85" Grid.RowSpan="2" VerticalAlignment="Top" Margin="106,6,12,0"/>
+                        <TextBlock Foreground="White" Text="Ощущение:" Grid.Column="1" FontSize="26" TextAlignment="Center" Padding="0, 5, 0, 0" FontFamily="#Jura" HorizontalAlignment="Right" Width="150"></TextBlock>
+                        <TextBlock Foreground="White" Text="{Binding currentFeel}" Grid.Column="1" Grid.Row="1" FontSize="26" TextAlignment="Center" Padding="0, 5, 0, 0" FontFamily="#Jura" HorizontalAlignment="Right" Width="150"></TextBlock>
+                        <TextBlock Foreground="White" Text="Мин." Grid.Column="2" FontSize="26" TextAlignment="Center" Padding="0, 5, 0, 0" FontFamily="#Jura" HorizontalAlignment="Right" Width="80"></TextBlock>
+                        <TextBlock Foreground="White" Text="{Binding currentMin}" Grid.Column="2" Grid.Row="1" FontSize="26" TextAlignment="Center" Padding="0, 5, 0, 0" FontFamily="#Jura" HorizontalAlignment="Right" Width="80"></TextBlock>
+                        <TextBlock Foreground="White" Text="Макс." Grid.Column="3" FontSize="26" TextAlignment="Center" Padding="0, 5, 0, 0" FontFamily="#Jura" HorizontalAlignment="Right" Width="80"></TextBlock>
+                        <TextBlock Foreground="White" Text="{Binding currentMax}" Grid.Column="3" Grid.Row="1" FontSize="26" TextAlignment="Center" Padding="0, 5, 0, 0" FontFamily="#Jura" HorizontalAlignment="Right" Width="80"></TextBlock>
+                        <TextBlock Foreground="White" Text="Давление:" Grid.Column="4" FontSize="26" TextAlignment="Center" Padding="0, 5, 0, 0" FontFamily="#Jura"/>
+                        <TextBlock Foreground="White" Text="{Binding CityWeather.current.pressure_mb}" Grid.Column="4" Grid.Row="1" FontSize="26" TextAlignment="Center" Padding="0, 5, 0, 0" FontFamily="#Jura" HorizontalAlignment="Right" Width="150"></TextBlock>
+                        <TextBlock Foreground="White" Text="Влажность:" Grid.Column="5" FontSize="26" TextAlignment="Center" Padding="0, 5, 0, 0" FontFamily="#Jura" HorizontalAlignment="Right" Width="150"></TextBlock>
+                        <TextBlock Foreground="White" Text="{Binding CityWeather.current.humidity}" Grid.Row="1" Grid.Column="5" FontSize="26" TextAlignment="Center" Padding="0, 5, 0, 0" FontFamily="#Jura" HorizontalAlignment="Right" Width="150"></TextBlock>
+                        <TextBlock Foreground="White" Text="Ветер км/ч:" Grid.Column="6" FontSize="26" TextAlignment="Center" Padding="0, 5, 0, 0" FontFamily="#Jura" Margin="1,0,0,0"/>
+                        <TextBlock Foreground="White" Text="{Binding CityWeather.current.wind_kph}" Grid.Row="1" Grid.Column="6" FontSize="26" TextAlignment="Center" Padding="0, 5, 0, 0" FontFamily="#Jura" Margin="1,0,0,0"/>
+                        <TextBlock Foreground="White" Text="Ветер°:" Grid.Column="7" FontSize="26" TextAlignment="Center" Padding="0, 5, 0, 0" FontFamily="#Jura" Margin="0,0,1,0"/>
+                        <TextBlock Foreground="White" Text="{Binding CityWeather.current.wind_degree}" Grid.Row="1" Grid.Column="7" FontSize="26" TextAlignment="Center" Padding="0, 5, 0, 0" FontFamily="#Jura" Margin="0,0,1,0"/>
+                    </Grid>
+                    <Grid Margin="20, 20, 20, 0" Height="216" VerticalAlignment="Top">
+                        <Grid.Background>
+                            <SolidColorBrush Color="#F8C5B4" Opacity="0.5"></SolidColorBrush>
+                        </Grid.Background>
+                        <ScrollViewer HorizontalScrollBarVisibility="Visible" VerticalScrollBarVisibility="Disabled" Height="216" VerticalAlignment="Top">
+                            <WrapPanel>
+                                <uc:Card Width="110" Margin="20 20 20 0" img="{Binding Image[0]}" temp="{Binding TemperatureCards[0]}" time="{Binding HoursCards[0]}" humidity="{Binding CityWeather.forecast.forecastday[0].hour[0].humidity}" feels="{Binding FeelsCards[0]}"></uc:Card>
+                                <uc:Card Width="110" Margin="20 20 20 0" img="{Binding Image[1]}" temp="{Binding TemperatureCards[1]}" time="{Binding HoursCards[1]}" humidity="{Binding CityWeather.forecast.forecastday[0].hour[1].humidity}" feels="{Binding FeelsCards[1]}"></uc:Card>
+                                <uc:Card Width="110" Margin="20 20 20 0" img="{Binding Image[2]}" temp="{Binding TemperatureCards[2]}" time="{Binding HoursCards[2]}" humidity="{Binding CityWeather.forecast.forecastday[0].hour[2].humidity}" feels="{Binding FeelsCards[2]}"></uc:Card>
+                                <uc:Card Width="110" Margin="20 20 20 0" img="{Binding Image[3]}" temp="{Binding TemperatureCards[3]}" time="{Binding HoursCards[3]}" humidity="{Binding CityWeather.forecast.forecastday[0].hour[3].humidity}" feels="{Binding FeelsCards[3]}"></uc:Card>
+                                <uc:Card Width="110" Margin="20 20 20 0" img="{Binding Image[4]}" temp="{Binding TemperatureCards[4]}" time="{Binding HoursCards[4]}" humidity="{Binding CityWeather.forecast.forecastday[0].hour[4].humidity}" feels="{Binding FeelsCards[4]}"></uc:Card>
+                                <uc:Card Width="110" Margin="20 20 20 0" img="{Binding Image[5]}" temp="{Binding TemperatureCards[5]}" time="{Binding HoursCards[5]}" humidity="{Binding CityWeather.forecast.forecastday[0].hour[5].humidity}" feels="{Binding FeelsCards[5]}"></uc:Card>
+                                <uc:Card Width="110" Margin="20 20 20 0" img="{Binding Image[6]}" temp="{Binding TemperatureCards[6]}" time="{Binding HoursCards[6]}" humidity="{Binding CityWeather.forecast.forecastday[0].hour[6].humidity}" feels="{Binding FeelsCards[6]}"></uc:Card>
+                                <uc:Card Width="110" Margin="20 20 20 0" img="{Binding Image[7]}" temp="{Binding TemperatureCards[7]}" time="{Binding HoursCards[7]}" humidity="{Binding CityWeather.forecast.forecastday[0].hour[7].humidity}" feels="{Binding FeelsCards[7]}"></uc:Card>
+                                <uc:Card Width="110" Margin="20 20 20 0" img="{Binding Image[8]}" temp="{Binding TemperatureCards[8]}" time="{Binding HoursCards[8]}" humidity="{Binding CityWeather.forecast.forecastday[0].hour[8].humidity}" feels="{Binding FeelsCards[8]}"></uc:Card>
+                                <uc:Card Width="110" Margin="20 20 20 0" img="{Binding Image[9]}" temp="{Binding TemperatureCards[9]}" time="{Binding HoursCards[9]}" humidity="{Binding CityWeather.forecast.forecastday[0].hour[9].humidity}" feels="{Binding FeelsCards[9]}"></uc:Card>
+                                <uc:Card Width="110" Margin="20 20 20 0" img="{Binding Image[10]}" temp="{Binding TemperatureCards[10]}" time="{Binding HoursCards[10]}" humidity="{Binding CityWeather.forecast.forecastday[0].hour[10].humidity}" feels="{Binding FeelsCards[10]}"></uc:Card>
+                                <uc:Card Width="110" Margin="20 20 20 0" img="{Binding Image[11]}" temp="{Binding TemperatureCards[11]}" time="{Binding HoursCards[11]}" humidity="{Binding CityWeather.forecast.forecastday[0].hour[11].humidity}" feels="{Binding FeelsCards[11]}"></uc:Card>
+                                <uc:Card Width="110" Margin="20 20 20 0" img="{Binding Image[12]}" temp="{Binding TemperatureCards[12]}" time="{Binding HoursCards[12]}" humidity="{Binding CityWeather.forecast.forecastday[0].hour[12].humidity}" feels="{Binding FeelsCards[12]}"></uc:Card>
+                                <uc:Card Width="110" Margin="20 20 20 0" img="{Binding Image[13]}" temp="{Binding TemperatureCards[13]}" time="{Binding HoursCards[13]}" humidity="{Binding CityWeather.forecast.forecastday[0].hour[13].humidity}" feels="{Binding FeelsCards[13]}"></uc:Card>
+                                <uc:Card Width="110" Margin="20 20 20 0" img="{Binding Image[14]}" temp="{Binding TemperatureCards[14]}" time="{Binding HoursCards[14]}" humidity="{Binding CityWeather.forecast.forecastday[0].hour[14].humidity}" feels="{Binding FeelsCards[14]}"></uc:Card>
+                                <uc:Card Width="110" Margin="20 20 20 0" img="{Binding Image[15]}" temp="{Binding TemperatureCards[15]}" time="{Binding HoursCards[15]}" humidity="{Binding CityWeather.forecast.forecastday[0].hour[15].humidity}" feels="{Binding FeelsCards[15]}"></uc:Card>
+                                <uc:Card Width="110" Margin="20 20 20 0" img="{Binding Image[16]}" temp="{Binding TemperatureCards[16]}" time="{Binding HoursCards[16]}" humidity="{Binding CityWeather.forecast.forecastday[0].hour[16].humidity}" feels="{Binding FeelsCards[16]}"></uc:Card>
+                                <uc:Card Width="110" Margin="20 20 20 0" img="{Binding Image[17]}" temp="{Binding TemperatureCards[17]}" time="{Binding HoursCards[17]}" humidity="{Binding CityWeather.forecast.forecastday[0].hour[17].humidity}" feels="{Binding FeelsCards[17]}"></uc:Card>
+                                <uc:Card Width="110" Margin="20 20 20 0" img="{Binding Image[18]}" temp="{Binding TemperatureCards[18]}" time="{Binding HoursCards[18]}" humidity="{Binding CityWeather.forecast.forecastday[0].hour[18].humidity}" feels="{Binding FeelsCards[18]}"></uc:Card>
+                                <uc:Card Width="110" Margin="20 20 20 0" img="{Binding Image[19]}" temp="{Binding TemperatureCards[19]}" time="{Binding HoursCards[19]}" humidity="{Binding CityWeather.forecast.forecastday[0].hour[19].humidity}" feels="{Binding FeelsCards[19]}"></uc:Card>
+                                <uc:Card Width="110" Margin="20 20 20 0" img="{Binding Image[20]}" temp="{Binding TemperatureCards[20]}" time="{Binding HoursCards[20]}" humidity="{Binding CityWeather.forecast.forecastday[0].hour[20].humidity}" feels="{Binding FeelsCards[20]}"></uc:Card>
+                                <uc:Card Width="110" Margin="20 20 20 0" img="{Binding Image[21]}" temp="{Binding TemperatureCards[21]}" time="{Binding HoursCards[21]}" humidity="{Binding CityWeather.forecast.forecastday[0].hour[21].humidity}" feels="{Binding FeelsCards[21]}"></uc:Card>
+                                <uc:Card Width="110" Margin="20 20 20 0" img="{Binding Image[22]}" temp="{Binding TemperatureCards[22]}" time="{Binding HoursCards[22]}" humidity="{Binding CityWeather.forecast.forecastday[0].hour[22].humidity}" feels="{Binding FeelsCards[22]}"></uc:Card>
+                                <uc:Card Width="110" Margin="20 20 20 0" img="{Binding Image[23]}" temp="{Binding TemperatureCards[23]}" time="{Binding HoursCards[23]}" humidity="{Binding CityWeather.forecast.forecastday[0].hour[23].humidity}" feels="{Binding FeelsCards[23]}"></uc:Card>
+                            </WrapPanel>
+                        </ScrollViewer>
+                    </Grid>
+                    <Grid Margin="20, 20, 20, 0" Height="509" VerticalAlignment="Top">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="354*"/>
+                            <ColumnDefinition Width="398*"/>
+                            <ColumnDefinition Width="345*"/>
+                        </Grid.ColumnDefinitions>
+                        <Grid.Background>
+                            <SolidColorBrush Color="#F8C5B4" Opacity="0.5"></SolidColorBrush>
+                        </Grid.Background>
+                        <Button Content="Температура" Background="{DynamicResource Second}" Height="51" FontSize="20" FontFamily="#Jura" VerticalAlignment="Top" Margin="10,18,24,0" Click="Button_Click_1"/>
+                        <Button Content="Ощущается как" Background="{DynamicResource Second}" Height="51" FontSize="20" FontFamily="#Jura" VerticalAlignment="Top" Margin="54,18,44,0" Grid.Column="1" Click="Button_Click"/>
+                        <Button Content="Давление" Background="{DynamicResource Second}" Height="51" FontSize="20" FontFamily="#Jura" VerticalAlignment="Top" Margin="27,18,30,0" Grid.Column="2" Click="Button_Click_2"/>
+                        <lvc:CartesianChart Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="3" Name="TempChart" Margin="0,74,0,0">
+                            <lvc:CartesianChart.Series>
+                                <lvc:LineSeries Values="{Binding Temperature}"
+                                Stroke="{DynamicResource Second}"
+                                Fill="Transparent">
+                                </lvc:LineSeries>
+                            </lvc:CartesianChart.Series>
+                            <lvc:CartesianChart.AxisX>
+                                <lvc:Axis Foreground="Green" Labels="{Binding Hours}">
+                                    <lvc:Axis.Separator>
+                                        <lvc:Separator>
+                                            <lvc:Separator.Stroke>
+                                                <SolidColorBrush Color="Aquamarine"/>
+                                            </lvc:Separator.Stroke>
+                                        </lvc:Separator>
+                                    </lvc:Axis.Separator>
+                                </lvc:Axis>
+                            </lvc:CartesianChart.AxisX>
+                            <lvc:CartesianChart.AxisY>
+                                <lvc:Axis Foreground="Blue">
+                                    <lvc:Axis.Separator>
+                                        <lvc:Separator>
+                                            <lvc:Separator.Stroke>
+                                                <SolidColorBrush Color="LightGreen"/>
+                                            </lvc:Separator.Stroke>
+                                        </lvc:Separator>
+                                    </lvc:Axis.Separator>
+                                </lvc:Axis>
+                            </lvc:CartesianChart.AxisY>
+                        </lvc:CartesianChart>
+                        <lvc:CartesianChart Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="3" Visibility="Hidden" Name="FeelChart" Margin="0,74,0,0">
+                            <lvc:CartesianChart.Series>
+                                <lvc:LineSeries Values="{Binding FeelTemp}"
+                                Stroke="{DynamicResource Second}"
+                                Fill="Transparent">
+                                </lvc:LineSeries>
+                            </lvc:CartesianChart.Series>
+                            <lvc:CartesianChart.AxisX>
+                                <lvc:Axis Foreground="Green" Labels="{Binding Hours}">
+                                    <lvc:Axis.Separator>
+                                        <lvc:Separator>
+                                            <lvc:Separator.Stroke>
+                                                <SolidColorBrush Color="Aquamarine"/>
+                                            </lvc:Separator.Stroke>
+                                        </lvc:Separator>
+                                    </lvc:Axis.Separator>
+                                </lvc:Axis>
+                            </lvc:CartesianChart.AxisX>
+                            <lvc:CartesianChart.AxisY>
+                                <lvc:Axis Foreground="Blue">
+                                    <lvc:Axis.Separator>
+                                        <lvc:Separator>
+                                            <lvc:Separator.Stroke>
+                                                <SolidColorBrush Color="LightGreen"/>
+                                            </lvc:Separator.Stroke>
+                                        </lvc:Separator>
+                                    </lvc:Axis.Separator>
+                                </lvc:Axis>
+                            </lvc:CartesianChart.AxisY>
+                        </lvc:CartesianChart>
+                        <lvc:CartesianChart Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="3" Visibility="Hidden" Name="PressureChart" Margin="0,74,0,0">
+                            <lvc:CartesianChart.Series>
+                                <lvc:LineSeries Values="{Binding Pressure}"
+                                Stroke="{DynamicResource Second}"
+                                Fill="Transparent">
+                                </lvc:LineSeries>
+                            </lvc:CartesianChart.Series>
+                            <lvc:CartesianChart.AxisX>
+                                <lvc:Axis Foreground="Green" Labels="{Binding Hours}">
+                                    <lvc:Axis.Separator>
+                                        <lvc:Separator>
+                                            <lvc:Separator.Stroke>
+                                                <SolidColorBrush Color="Aquamarine"/>
+                                            </lvc:Separator.Stroke>
+                                        </lvc:Separator>
+                                    </lvc:Axis.Separator>
+                                </lvc:Axis>
+                            </lvc:CartesianChart.AxisX>
+                            <lvc:CartesianChart.AxisY>
+                                <lvc:Axis Foreground="Blue">
+                                    <lvc:Axis.Separator>
+                                        <lvc:Separator>
+                                            <lvc:Separator.Stroke>
+                                                <SolidColorBrush Color="LightGreen"/>
+                                            </lvc:Separator.Stroke>
+                                        </lvc:Separator>
+                                    </lvc:Axis.Separator>
+                                </lvc:Axis>
+                            </lvc:CartesianChart.AxisY>
+                        </lvc:CartesianChart>
+                    </Grid>
+                </StackPanel>
+            </ScrollViewer>
+        </Grid>
+        <Grid Margin="443,128,0,0" Name="RightPanelSettings" Visibility="Hidden">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="291*"/>
+                <RowDefinition Height="41*"/>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="375*"/>
+                <ColumnDefinition Width="282*"/>
+                <ColumnDefinition Width="41*"/>
+                <ColumnDefinition Width="51*"/>
+            </Grid.ColumnDefinitions>
+            <TextBlock Text="Ваш основной город: " FontSize="28" Foreground="White" TextAlignment="Center" FontFamily="#Jura" Height="44" VerticalAlignment="Top" Grid.ColumnSpan="4"/>
+            <TextBox Name="MainCity" FontSize="26" Background="{DynamicResource Second}" Opacity="0.5" TextWrapping="NoWrap" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Foreground="White" FontFamily="#Jura"  BorderThickness="0" Margin="0,44,0,0" Height="34" VerticalAlignment="Top" Grid.ColumnSpan="3"/>
+            <Button BorderThickness="0" Background="{DynamicResource Second}" Opacity="0.5" Name="ClearCityName" FontFamily="#Jura" Foreground="White" FontSize="15" Margin="0,44,13,0" Content="X" Padding="0,2,0,0" Height="34" VerticalAlignment="Top" Grid.Column="3" Click="ClearCityName_Click"/>
+            <TextBlock Text="Избранные города: " FontSize="28" Foreground="White" TextAlignment="Center" FontFamily="#Jura" Height="44" VerticalAlignment="Top" Grid.ColumnSpan="4" Margin="0,83,0,0"/>
+            <Grid Margin="0,127,10,0" Grid.ColumnSpan="4" Height="215" VerticalAlignment="Top">
+                <Grid.Background>
+                    <SolidColorBrush Color="#F8C5B4" Opacity="0.5"></SolidColorBrush>
+                </Grid.Background>
+                <WrapPanel Name="PanelOfCities">
+                    <!-- ТУТ ДОБАВЛЯТЬ БУДЕМ ЭЛЕМЕНТЫ УПРАВЛЕНИЯ -->
+                </WrapPanel>
+            </Grid>
+            <TextBox Name="AddCity" FontSize="26" Background="{DynamicResource Second}" Opacity="0.5" TextWrapping="NoWrap" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Foreground="White" FontFamily="#Jura"  BorderThickness="0" Margin="0,374,0,0" Height="34" VerticalAlignment="Top" Grid.ColumnSpan="2"/>
+            <Button BorderThickness="0" Background="{DynamicResource Second}" Opacity="0.5" Name="ClearAddCity" FontFamily="#Jura" Foreground="White" FontSize="15" Margin="0,374,0,0" Content="X" Padding="0,2,0,0" Height="34" VerticalAlignment="Top" Grid.Column="2" Click="ClearAddCity_Click"/>
+            <Button BorderThickness="0" Background="{DynamicResource Second}" Opacity="0.5" Name="AddCity_Btn" FontFamily="#Jura" Foreground="White" FontSize="15" Margin="0,374,10,0" Content="+" Padding="0,2,0,0" Height="34" VerticalAlignment="Top" Grid.Column="3" Click="AddCity_Btn_Click"/>
+            <TextBlock Text="Исчисление градусов: " FontSize="28" Foreground="White" TextAlignment="Center" FontFamily="#Jura" Height="44" VerticalAlignment="Top" Grid.ColumnSpan="4" Margin="0,431,10,0"/>
+            <RadioButton GroupName="TempType" Name="Cel_RB" Content="Цельсий | C° " HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontSize="28" Foreground="White" FontFamily="#Jura" Height="44" VerticalAlignment="Top" Margin="0,480,0,0"/>
+            <RadioButton GroupName="TempType" Name="Far_RB" Content="Фаренгейт | F° " HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontSize="28" Foreground="White" FontFamily="#Jura" Height="44" VerticalAlignment="Top" Grid.ColumnSpan="3" Margin="5,480,10,0" Grid.Column="1"/>
+            <Button Content="Сохранить" Background="{DynamicResource Second}" FontSize="24" Foreground="White" FontFamily="#Jura" Grid.ColumnSpan="4" Margin="0,28,10,0" Grid.Row="1" Height="44" VerticalAlignment="Top" Click="SaveChanges"/>
+        </Grid>
+    </Grid>
+</Window>

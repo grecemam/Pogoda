@@ -1,0 +1,8 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+    <ImageBrush x:Key="Main" ImageSource="pack://siteoforigin:,,,/Resources/Night.png"></ImageBrush>
+    <SolidColorBrush x:Key="Second" Color="#591E6E"></SolidColorBrush>
+    <SolidColorBrush x:Key="Buttons" Color="#FFFFFF"></SolidColorBrush>
+    <SolidColorBrush x:Key="Hover" Color="#591E6E"></SolidColorBrush>
+    <SolidColorBrush x:Key="Focus" Color="#591E6E"></SolidColorBrush>
+</ResourceDictionary>

@@ -1,0 +1,71 @@
+C:\Users\USER\source\repos\SunClouds\SunClouds\bin\Debug\SunClouds.exe.config
+C:\Users\USER\source\repos\SunClouds\SunClouds\bin\Debug\SunClouds.exe
+C:\Users\USER\source\repos\SunClouds\SunClouds\bin\Debug\SunClouds.pdb
+C:\Users\USER\source\repos\SunClouds\SunClouds\obj\Debug\SunClouds.csprojAssemblyReference.cache
+C:\Users\USER\source\repos\SunClouds\SunClouds\obj\Debug\View\MainWindow.g.cs
+C:\Users\USER\source\repos\SunClouds\SunClouds\obj\Debug\App.g.cs
+C:\Users\USER\source\repos\SunClouds\SunClouds\obj\Debug\SunClouds_MarkupCompile.cache
+C:\Users\USER\source\repos\SunClouds\SunClouds\obj\Debug\SunClouds_MarkupCompile.lref
+C:\Users\USER\source\repos\SunClouds\SunClouds\obj\Debug\View\MainWindow.baml
+C:\Users\USER\source\repos\SunClouds\SunClouds\obj\Debug\SunClouds.g.resources
+C:\Users\USER\source\repos\SunClouds\SunClouds\obj\Debug\SunClouds.Properties.Resources.resources
+C:\Users\USER\source\repos\SunClouds\SunClouds\obj\Debug\SunClouds.csproj.GenerateResource.cache
+C:\Users\USER\source\repos\SunClouds\SunClouds\obj\Debug\SunClouds.csproj.CoreCompileInputs.cache
+C:\Users\USER\source\repos\SunClouds\SunClouds\obj\Debug\SunClouds.exe
+C:\Users\USER\source\repos\SunClouds\SunClouds\obj\Debug\SunClouds.pdb
+C:\Users\USER\source\repos\SunClouds\SunClouds\obj\Debug\Resources\DayTheme.baml
+C:\Users\USER\source\repos\SunClouds\SunClouds\obj\Debug\Resources\MorningEvening.baml
+C:\Users\USER\source\repos\SunClouds\SunClouds\obj\Debug\Resources\NightTheme.baml
+C:\Users\USER\source\repos\SunClouds\SunClouds\obj\Debug\App.baml
+C:\Users\USER\source\repos\SunClouds\SunClouds\obj\Debug\View\MainSunClouds.g.cs
+C:\Users\USER\source\repos\SunClouds\SunClouds\obj\Debug\View\MainSunClouds.baml
+C:\Users\USER\source\repos\SunClouds\SunClouds\obj\Debug\Resources\Card.g.cs
+C:\Users\USER\source\repos\SunClouds\SunClouds\obj\Debug\Resources\Card.baml
+C:\Users\USER\source\repos\SunClouds\SunClouds\obj\Debug\GeneratedInternalTypeHelper.g.cs
+C:\Users\USER\source\repos\SunClouds\SunClouds\obj\Debug\SunClouds.csproj.CopyComplete
+C:\Users\USER\source\repos\SunClouds\SunClouds\bin\Debug\LiveCharts.dll
+C:\Users\USER\source\repos\SunClouds\SunClouds\bin\Debug\LiveCharts.Wpf.dll
+C:\Users\USER\source\repos\SunClouds\SunClouds\bin\Debug\LiveCharts.pdb
+C:\Users\USER\source\repos\SunClouds\SunClouds\bin\Debug\LiveCharts.xml
+C:\Users\USER\source\repos\SunClouds\SunClouds\bin\Debug\LiveCharts.Wpf.pdb
+C:\Users\USER\source\repos\SunClouds\SunClouds\bin\Debug\LiveCharts.Wpf.xml
+C:\Users\USER\source\repos\SunClouds\SunClouds\bin\Debug\Newtonsoft.Json.dll
+C:\Users\USER\source\repos\SunClouds\SunClouds\bin\Debug\Newtonsoft.Json.xml
+C:\Users\USER\source\repos\SunClouds\SunClouds\obj\Debug\Resources\FavCityCard.g.cs
+C:\Users\USER\source\repos\SunClouds\SunClouds\obj\Debug\Resources\FavCityCard.baml
+C:\Users\maksi\OneDrive\шарп 4 семестр впф\SunClouds\SunClouds\bin\Debug\SunClouds.exe.config
+C:\Users\maksi\OneDrive\шарп 4 семестр впф\SunClouds\SunClouds\bin\Debug\SunClouds.exe
+C:\Users\maksi\OneDrive\шарп 4 семестр впф\SunClouds\SunClouds\bin\Debug\SunClouds.pdb
+C:\Users\maksi\OneDrive\шарп 4 семестр впф\SunClouds\SunClouds\bin\Debug\LiveCharts.dll
+C:\Users\maksi\OneDrive\шарп 4 семестр впф\SunClouds\SunClouds\bin\Debug\LiveCharts.Wpf.dll
+C:\Users\maksi\OneDrive\шарп 4 семестр впф\SunClouds\SunClouds\bin\Debug\Newtonsoft.Json.dll
+C:\Users\maksi\OneDrive\шарп 4 семестр впф\SunClouds\SunClouds\bin\Debug\LiveCharts.pdb
+C:\Users\maksi\OneDrive\шарп 4 семестр впф\SunClouds\SunClouds\bin\Debug\LiveCharts.xml
+C:\Users\maksi\OneDrive\шарп 4 семестр впф\SunClouds\SunClouds\bin\Debug\LiveCharts.Wpf.pdb
+C:\Users\maksi\OneDrive\шарп 4 семестр впф\SunClouds\SunClouds\bin\Debug\LiveCharts.Wpf.xml
+C:\Users\maksi\OneDrive\шарп 4 семестр впф\SunClouds\SunClouds\bin\Debug\Newtonsoft.Json.xml
+C:\Users\maksi\OneDrive\шарп 4 семестр впф\SunClouds\SunClouds\obj\Debug\SunClouds.csproj.AssemblyReference.cache
+C:\Users\maksi\OneDrive\шарп 4 семестр впф\SunClouds\SunClouds\obj\Debug\SunClouds.csproj.SuggestedBindingRedirects.cache
+C:\Users\maksi\OneDrive\шарп 4 семестр впф\SunClouds\SunClouds\obj\Debug\Resources\DayTheme.baml
+C:\Users\maksi\OneDrive\шарп 4 семестр впф\SunClouds\SunClouds\obj\Debug\Resources\MorningEvening.baml
+C:\Users\maksi\OneDrive\шарп 4 семестр впф\SunClouds\SunClouds\obj\Debug\Resources\NightTheme.baml
+C:\Users\maksi\OneDrive\шарп 4 семестр впф\SunClouds\SunClouds\obj\Debug\Resources\Card.g.cs
+C:\Users\maksi\OneDrive\шарп 4 семестр впф\SunClouds\SunClouds\obj\Debug\Resources\FavCityCard.g.cs
+C:\Users\maksi\OneDrive\шарп 4 семестр впф\SunClouds\SunClouds\obj\Debug\View\MainSunClouds.g.cs
+C:\Users\maksi\OneDrive\шарп 4 семестр впф\SunClouds\SunClouds\obj\Debug\View\MainWindow.g.cs
+C:\Users\maksi\OneDrive\шарп 4 семестр впф\SunClouds\SunClouds\obj\Debug\App.g.cs
+C:\Users\maksi\OneDrive\шарп 4 семестр впф\SunClouds\SunClouds\obj\Debug\GeneratedInternalTypeHelper.g.cs
+C:\Users\maksi\OneDrive\шарп 4 семестр впф\SunClouds\SunClouds\obj\Debug\SunClouds_MarkupCompile.cache
+C:\Users\maksi\OneDrive\шарп 4 семестр впф\SunClouds\SunClouds\obj\Debug\SunClouds_MarkupCompile.lref
+C:\Users\maksi\OneDrive\шарп 4 семестр впф\SunClouds\SunClouds\obj\Debug\App.baml
+C:\Users\maksi\OneDrive\шарп 4 семестр впф\SunClouds\SunClouds\obj\Debug\Resources\Card.baml
+C:\Users\maksi\OneDrive\шарп 4 семестр впф\SunClouds\SunClouds\obj\Debug\Resources\FavCityCard.baml
+C:\Users\maksi\OneDrive\шарп 4 семестр впф\SunClouds\SunClouds\obj\Debug\View\MainSunClouds.baml
+C:\Users\maksi\OneDrive\шарп 4 семестр впф\SunClouds\SunClouds\obj\Debug\View\MainWindow.baml
+C:\Users\maksi\OneDrive\шарп 4 семестр впф\SunClouds\SunClouds\obj\Debug\SunClouds.g.resources
+C:\Users\maksi\OneDrive\шарп 4 семестр впф\SunClouds\SunClouds\obj\Debug\SunClouds.Properties.Resources.resources
+C:\Users\maksi\OneDrive\шарп 4 семестр впф\SunClouds\SunClouds\obj\Debug\SunClouds.csproj.GenerateResource.cache
+C:\Users\maksi\OneDrive\шарп 4 семестр впф\SunClouds\SunClouds\obj\Debug\SunClouds.csproj.CoreCompileInputs.cache
+C:\Users\maksi\OneDrive\шарп 4 семестр впф\SunClouds\SunClouds\obj\Debug\SunClouds.csproj.CopyComplete
+C:\Users\maksi\OneDrive\шарп 4 семестр впф\SunClouds\SunClouds\obj\Debug\SunClouds.exe
+C:\Users\maksi\OneDrive\шарп 4 семестр впф\SunClouds\SunClouds\obj\Debug\SunClouds.pdb

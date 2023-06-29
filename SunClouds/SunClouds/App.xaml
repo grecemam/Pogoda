@@ -1,0 +1,15 @@
+﻿<Application x:Class="SunClouds.App"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:local="clr-namespace:SunClouds"
+             StartupUri="View/MainWindow.xaml">
+    <Application.Resources>
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary Source="/resources/NightTheme.xaml"></ResourceDictionary>
+                <ResourceDictionary Source="/resources/DayTheme.xaml"></ResourceDictionary>
+                <ResourceDictionary Source="/resources/MorningEvening.xaml"></ResourceDictionary>
+            </ResourceDictionary.MergedDictionaries>
+        </ResourceDictionary>
+    </Application.Resources>
+</Application>
